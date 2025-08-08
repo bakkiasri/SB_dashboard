@@ -6,11 +6,11 @@ import { Routes, Route } from "react-router-dom";
 import Dashboard from './pages/dashboard';
 import Navbar from './components/Navbar';
 import Sidemenu from './components/Sidemenu';
-
+import { SidebarProvider } from "./components/SidebarContext";
 function App() {
 
   return (
-    <>
+    <>  <SidebarProvider>
        <div className="flex h-screen">
       {/* Sidebar */}
       <Sidemenu />
@@ -29,6 +29,7 @@ function App() {
         </div>
       </div>
     </div>
+    </SidebarProvider>
     </>
   )
 }
